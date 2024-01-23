@@ -23,9 +23,11 @@ export const Planetas = () => {
                             }
                             <div className="card-body">
                                 <h5 className="card-title">{item.name}</h5>
-                                <p className="card-text">climate : {item.climate}</p>
-                                <p className="card-text">population : {item.population}</p>
-                                <a href="#" className="btn btn-outline-primary float-start">Learn more</a>
+                                <p className="card-text">Climate : {item.climate}</p>
+                                <p className="card-text">Population : {item.population}</p>
+                                <Link to={"/singleplanets/" + (id + 1)} className="btn btn-outline-primary float-start">Learn more</Link>
+                                <div className="btn btn-outline-warning float-end" onClick={() => actions.favoritos(item.name)}> <i className="fa fa-heart"></i>
+                                </div>
                             </div>
                         </div>
 

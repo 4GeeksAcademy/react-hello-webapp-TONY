@@ -20,9 +20,11 @@ export const Personajes = () => {
                         <img src={"https://starwars-visualguide.com/assets/img/characters/"+ (id + 1) +".jpg"}className="card-img-top" alt={item.name} />
                         <div className="card-body">
                             <h5 className="card-title">{item.name}</h5>
-                            <p className="card-text">height : {item.height}</p>
-                            <p className="card-text">mass : {item.mass}</p>
+                            <p className="card-text">Height : {item.height}</p>
+                            <p className="card-text">Mass : {item.mass}</p>
                             <Link to={"/single/"+(id + 1)} className="btn btn-outline-primary float-start">Learn more</Link>
+                            <div className="btn btn-outline-warning float-end" onClick={() => actions.favoritos(item.name)}> <i className="fa fa-heart"></i>
+                            </div>
                         </div>
                     </div>
 
